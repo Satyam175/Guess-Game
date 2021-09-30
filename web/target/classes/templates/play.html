@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number Game</title>
+</head>
+<body>
+  <div align="center">
+      <h1>Welcome to the Guess Number Game</h1>
+      <h3 th:text="${mainMessage}">
+          Main Message Content
+      </h3>
+      <h3 th:text="${resultMessage}">
+          Result Message Content
+      </h3>
+
+      <form th:action="play"  method="post" >
+          <label for="guess" >Enter your Guess: </label>
+          <input id="guess" type="number" name="guess" />
+          <input type="submit" value="Submit" />
+      </form>
+
+      <footer>
+          <p>Created by Satyam Kaushik</p>
+      </footer>
+
+  </div>
+</body>
+</html>
